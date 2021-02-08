@@ -7,16 +7,6 @@
 	function showCity(){alert(villeCourante);
         <label for="ville-select">Choose a ville:</label>
 
-<select onchange=showCity()>
-    <option value="">--Please choose an option--</option>
-    <option value="Strasbourg">Strasbourg</option>
-    <option value="Paris">Paris</option>
-    <option value="Villé">Villé</option>
-let cities = document.getElementsByClassName("city");
-let l = cities.length;
-</select>}
-    
-
 
 	</script>
 	<title>Suivi de Météo</title>
@@ -52,6 +42,17 @@ let l = cities.length;
 }
 
 	</style>
+	<label><strong>Veuillez choisir la ville :</strong>
+<select id="ville">
+  <option value="Strasbourg">Strasbourg</option>
+  <option value="Paris" selected>Paris</option>
+  <option value="Villé">Villé</option>
+</select>
+</label>
+
+    
+
+
 	</head>
 	<body>
 
