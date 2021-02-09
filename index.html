@@ -12,7 +12,6 @@
 let Paris = document.getElementById("par");
 let Villé = document.getElementById("vil");
 let Strasbourg = document.getElementById("Stras");
-
 function showCity(){
 
 if(getComputedStyle(par).display !="none"){
@@ -20,6 +19,7 @@ if(getComputedStyle(par).display !="none"){
     vil.style.display = "none";}
 
 };
+
 
     </script>
 	<title>Suivi de Météo</title>
@@ -57,7 +57,13 @@ if(getComputedStyle(par).display !="none"){
 }
 
 	</style>
-<label><strong>Veuillez choisir la ville :</strong>
+
+	</head>
+	<body>
+
+	  <h1>TP Météo HTML</h1>
+		
+		<label><strong>Veuillez choisir la ville :</strong>
 <select onchange=showCity()>
   <option value=""selected>------</option>
   <option value="Strasbourg">Strasbourg</option>
@@ -66,10 +72,6 @@ if(getComputedStyle(par).display !="none"){
 </select>
 </label>
 
-	</head>
-	<body>
-
-	  <h1>TP Météo HTML</h1>
 	<div class="flex">
 
 	  <div id="stras"  ><h2 class="city" >Strasbourg <br> <span class ="para" >10°, nuageux </spane> <br> <img src="https://static.thenounproject.com/png/37296-200.png" height="30px";/></h2> </div>
