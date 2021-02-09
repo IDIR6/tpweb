@@ -3,20 +3,20 @@
 	<head>
 	  <meta charset="utf-8">
 	 <script>
-	let villeCourante= "Villé"
-	function showCity(){console.log(villeCourante);}
-	let cities = document.getElementByClassName("city");
-	let l = cities.length;
-
-
 let Paris = document.getElementById("par");
 let Villé = document.getElementById("vil");
 let Strasbourg = document.getElementById("Stras");
-function showCity(){
+function showCity(Paris,Villé,Strasbourg){
 
 if(getComputedStyle(par).display !="none"){
     stras.style.display = "none";
     vil.style.display = "none";}
+else if (getComputedStyle(stras).display !="none"){
+    par.style.display = "none";
+    vil.style.display = "none";}
+else {
+    stras.style.display = "none";
+    par.style.display = "none";}
 
 };
 
