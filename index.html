@@ -3,9 +3,7 @@
 	<head>
 	  <meta charset="utf-8">
 	 <script>
-	let villeCourante="Paris"
-	function showCity(){alert(villeCourante);
-        let villeCourante= "Villé"
+	let villeCourante= "Villé"
 	function showCity(){console.log(villeCourante);}
 	let cities = document.getElementByClassName("city");
 	let l = cities.length;
@@ -23,9 +21,10 @@ if(getComputedStyle(par).display !="none"){
 
 };
 
-	</script>
+    </script>
 	<title>Suivi de Météo</title>
 	<style>
+	
 	h1{color:white;
 	background-color:black;
 	font-family:cursive;
@@ -37,7 +36,9 @@ if(getComputedStyle(par).display !="none"){
 	}
 
 	.para{font-size:15px;
-		font-family:monospace;}
+		font-family:monospace;
+	width:auto;
+	}
 	#ref{color:purple;}
 
 	footer{
@@ -51,14 +52,13 @@ if(getComputedStyle(par).display !="none"){
 	justify-content:space-between;
 	}
 	.flex div {
-	margin:20px;
-	width:300px;
-
+	margin:10px;
+	width:200px;
 }
 
 	</style>
-	<label><strong>Veuillez choisir la ville :</strong>
-<select>
+<label><strong>Veuillez choisir la ville :</strong>
+<select onchange=showCity()>
   <option value=""selected>------</option>
   <option value="Strasbourg">Strasbourg</option>
   <option value="Paris">Paris</option>
@@ -66,22 +66,19 @@ if(getComputedStyle(par).display !="none"){
 </select>
 </label>
 
-    
-
-
 	</head>
 	<body>
 
 	  <h1>TP Météo HTML</h1>
 	<div class="flex">
 
-	  <div id="Stras"><h2 class="city" >Strasbourg <br> <span class ="para" >10°, nuageux </spane> <br> <img src="https://static.thenounproject.com/png/37296-200.png" height="30px";/></h2> </div>
+	  <div id="stras"  ><h2 class="city" >Strasbourg <br> <span class ="para" >10°, nuageux </spane> <br> <img src="https://static.thenounproject.com/png/37296-200.png" height="30px";/></h2> </div>
 	 
 								
 	 <div id="vil"> <h2 class="city">Villé <br><span class ="para"> 5°, orageux </spane> <br> <img src="https://static.thenounproject.com/png/653882-200.png" height="25px";/> </h2> </div>
 	
 
-	 <div id="par"> <h2 class="city">Paris <br> <span class ="para"> 7°, ensoleillé </spane> <br> <img src="https://static.thenounproject.com/png/653889-200.png" height="25px";/> </h2> </div>
+	 <div id="par"> <h2 class="city" >Paris <br> <span class ="para"> 7°, ensoleillé </spane> <br> <img src="https://static.thenounproject.com/png/653889-200.png" height="25px";/> </h2> </div>
 	 
 	</div>
 	<footer> <p> <strong>Naima IDIR</strong> <br> Icones météo par <a href="https://thenounproject.com/"> <span id="ref">  Nook Fulloption </spane> </a> </p> </footer>
