@@ -11,11 +11,10 @@ function showCity(Paris,Villé,Strasbourg){
 if(getComputedStyle(par).display !="none"){
     stras.style.display = "none";
     vil.style.display = "none";}
-else if (getComputedStyle(stras).display =="none"){
-    stras.style.display = "block";
-    par.style.display = "none";
+else if (getComputedStyle(stras).display !="none"){
+       par.style.display = "none";
     vil.style.display = "none";}
-else {
+else if (getComputedStyle(vil).display !="none"){
     stras.style.display = "none";
     par.style.display = "none";}
 
