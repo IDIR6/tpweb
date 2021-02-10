@@ -11,7 +11,8 @@ function showCity(Paris,Villé,Strasbourg){
 if(getComputedStyle(par).display !="none"){
     stras.style.display = "none";
     vil.style.display = "none";}
-else if (getComputedStyle(stras).display !="none"){
+else if (getComputedStyle(stras).display =="none"){
+    stras.style.display = "block";
     par.style.display = "none";
     vil.style.display = "none";}
 else {
@@ -37,7 +38,7 @@ else {
 
 	.para{font-size:15px;
 		font-family:monospace;
-	width:auto;
+	
 	}
 	#ref{color:purple;}
 
@@ -53,7 +54,7 @@ else {
 	}
 	.flex div {
 	margin:10px;
-	flex: 1 1 auto;
+	flex: auto;
 }
 
 	</style>
