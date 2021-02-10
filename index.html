@@ -9,12 +9,12 @@ let nomVilleSelectionnee = document.getElementById("menu").value;
 let cities=document.getElementsByClassName("city");
 let l=cities.length;  	
   for (var i=0; i<l; i++) {
-    if (cities[i].id != "vil") {
+    if (cities[i].id == "vil") {
       // garder l'element visible -> 
-	   vil.style.display= "none";
+	   vil.style.display= "block";
     } else {
       // cacher l'element -> 
-	    vil.style.display= "block ";
+	    vil.style.display= "none ";
     }}}
 
 </script>
