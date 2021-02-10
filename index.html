@@ -3,23 +3,36 @@
 	<head>
 	  <meta charset="utf-8">
 	 <script>
-let Paris = document.getElementById("par");
-let Villé = document.getElementById("vil");
-let Strasbourg = document.getElementById("Stras");
-
 function showCity(){
+  // 1. Récupérer la valeur courante du menu 
+  // Pour ça on va faire :
+  let nomVilleSelectionnee = document.getElementById(menu).value;
 
-if(getComputedStyle(par).display !="none"){
-    stras.style.display = "none";
-    vil.style.display = "none";}
-else {
-par.style.display = "none";
+  // 2. Récupérer la liste de toutes les div correspondant à une div de météo 
+  // Pour ça on va faire :
+  let cities = document.getElementsByClassName("city");
+
+  // 3. Parcourir la liste des div et cacher celles qui ne sont pas sélectionnées.
+  // TODO : definir l : la taille max de votre tableau cities
+let l=cities.length
+  for (i=0; i<l; i++) {
+    if (cities[i].id == vil) {
+      vil.style.display= "none";
+    } else {
+      vil.style.display= "";
     }
-};
+ else if (cities[i].id == stras) {
+      stras.style.display= "none";
+    } else {
+      stras.style.display= "";
+  }
+else if (cities[i].id == par) {
+      par.style.display= "none";
+    } else {
+      par.style.display= "";
+}}};
 
-
-
-    </script>
+</script>
 	<title>Suivi de Météo</title>
 	<style>
 	
@@ -62,7 +75,7 @@ par.style.display = "none";
 	  <h1>TP Météo HTML</h1>
 		
 		<label><strong>Veuillez choisir la ville :</strong>
-<select onchange=showCity()>
+<select id="menu" onchange=showCity()>
   <option value=""selected>------</option>
   <option value="Strasbourg">Strasbourg</option>
   <option value="Paris">Paris</option>
