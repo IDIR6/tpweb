@@ -3,13 +3,28 @@
 	<head>
 	  <meta charset="utf-8">
 	 <script>
-function showCity(){
-if(getComputedStyle(vil).display !="none"){
-    stras.style.display = "none";
-    par.style.display = "none";}  
-   if(getComputedStyle(par).display !="none"){
-    stras.style.display = "none";
-    vil.style.display = "none";}  
+function showCity() {
+  // 1. Récupérer la valeur courante du menu 
+  // Pour ça on va faire :
+  let nomVilleSelectionnee = document.getElementById("menu").value;
+
+  // 2. Récupérer la liste de toutes les div correspondant à une div de météo 
+  // Pour ça on va faire :
+  let cities = document.getElementsByClassName("city");
+
+  // 3. Parcourir la liste des div et cacher celles qui ne sont pas sélectionnées.
+  // TODO : definir l : la taille max de votre tableau cities
+	let l=cities.length;
+  for (i=0; i<l; i++) {
+    if (cities[i].id == nomVilleSelectionnee) {
+      // garder l'element visible -> 
+	    ELEMENT.style.display= "none";
+    } else {
+      // cacher l'element -> 
+	    ELEMENT.style.display= "";
+    }
+  }
+
 };
 
 </script>
@@ -65,13 +80,13 @@ if(getComputedStyle(vil).display !="none"){
 
 	<div class="flex">
 
-	  <div id="stras"  ><h2 class="city" >Strasbourg <br> <span class ="para" >10°, nuageux </spane> <br> <img src="https://static.thenounproject.com/png/37296-200.png" height="30px";/></h2> </div>
+	  <div id="stras" class="city" ><h2  >Strasbourg <br> <span class ="para" >10°, nuageux </spane> <br> <img src="https://static.thenounproject.com/png/37296-200.png" height="30px";/></h2> </div>
 	 
 								
-	 <div id="vil"> <h2 class="city">Villé <br><span class ="para"> 5°, orageux </spane> <br> <img src="https://static.thenounproject.com/png/653882-200.png" height="25px";/> </h2> </div>
+	 <div id="vil" class="city> <h2 ">Villé <br><span class ="para"> 5°, orageux </spane> <br> <img src="https://static.thenounproject.com/png/653882-200.png" height="25px";/> </h2> </div>
 	
 
-	 <div id="par"> <h2 class="city" >Paris <br> <span class ="para"> 7°, ensoleillé </spane> <br> <img src="https://static.thenounproject.com/png/653889-200.png" height="25px";/> </h2> </div>
+	 <div id="par"  class="city"> <h2 >Paris <br> <span class ="para"> 7°, ensoleillé </spane> <br> <img src="https://static.thenounproject.com/png/653889-200.png" height="25px";/> </h2> </div>
 	 
 	</div>
 	<footer> <p> <strong>Naima IDIR</strong> <br> Icones météo par <a href="https://thenounproject.com/"> <span id="ref">  Nook Fulloption </spane> </a> </p> </footer>
