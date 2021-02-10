@@ -13,7 +13,7 @@ let l=cities.length;
 	   nomVilleSelectionnee.style.display= "none";
     } else {
       // cacher l'element -> 
-	    nomVilleSelectionnee.style.display= "";
+	    nomVilleSelectionnee.style.display= " ";
     }
   }
 
@@ -62,7 +62,7 @@ let l=cities.length;
 	  <h1>TP Météo HTML</h1>
 		
 		<label><strong>Veuillez choisir la ville :</strong>
-<select id="menu" onchange=showCity()>
+<select id="menu" showCity()>
   <option value="-------"selected>------</option>
   <option value="Strasbourg">Strasbourg</option>
   <option value="Paris">Paris</option>
