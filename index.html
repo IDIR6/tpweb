@@ -3,12 +3,13 @@
 	<head>
 	  <meta charset="utf-8">
 	 <script>
-let Paris = document.getElementById("par");
-let Villé = document.getElementById("vil");
-let Strasbourg = document.getElementById("Stras");
-function showCity(Paris,Villé,Strasbourg){
+let Paris = document.getElementById("par").value;
+let Villé = document.getElementById("vil").value;
+let Strasbourg = document.getElementById("Stras").value;
+		 
+function showCity(){
 
-if(getComputedStyle(par).display !="none"){
+if(getComputedStyle(Paris).display !="none"){
     stras.style.display = "none";
     vil.style.display = "none";}
 else if (getComputedStyle(stras).display !="none"){
