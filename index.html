@@ -9,9 +9,14 @@ let nomVilleSelectionnee = document.getElementById("menu").value;
  {document.getElementById("par").style.display = "none";
 document.getElementById("stras").style.display = "none";
  }
-else if (nomVilleSelectionnee == "Strasbourg") 
+if (nomVilleSelectionnee == "Strasbourg") 
  {document.getElementById("par").style.display = "none";
 document.getElementById("vil").style.display = "none"; }
+
+if (nomVilleSelectionnee == "Paris") 
+ {document.getElementById("stras").style.display = "none";
+document.getElementById("vil").style.display = "none"; }
+	
 }	
 
 </script>
