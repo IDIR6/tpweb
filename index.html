@@ -8,16 +8,13 @@ let nomVilleSelectionnee = document.getElementById("menu").value;
 let cities = document.getElementsByClassName("city");
 let l=cities.length;  	
   for (i=0; i<l; i++) {
-    if (cities[i].id == nomVilleSelectionnee) {
+    if (cities[i].id != nomVilleSelectionnee) {
       // garder l'element visible -> 
 	   nomVilleSelectionnee.style.display= "none";
     } else {
       // cacher l'element -> 
-	    nomVilleSelectionnee.style.display= " ";
-    }
-  }
-
-};
+	    nomVilleSelectionnee.style.display= "block ";
+    }}}
 
 </script>
 	<title>Suivi de Météo</title>
