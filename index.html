@@ -6,15 +6,15 @@
 function showCity() {
 let nomVilleSelectionnee = document.getElementById("menu").value;
 
-let cities = document.getElementsByClassName("city");
+let cities=document.getElementsByClassName("city");
 let l=cities.length;  	
-  for (i=0; i<l; i++) {
-    if (cities[i].id != nomVilleSelectionnee) {
+  for (var i=0; i<l; i++) {
+    if (cities[i].id != "vil") {
       // garder l'element visible -> 
-	   nomVilleSelectionnee.style.display= "none";
+	   vil.style.display= "none";
     } else {
       // cacher l'element -> 
-	    nomVilleSelectionnee.style.display= "block ";
+	    vil.style.display= "block ";
     }}}
 
 </script>
