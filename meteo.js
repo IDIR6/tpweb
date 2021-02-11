@@ -11,9 +11,13 @@ else if (nomVilleSelectionnee == "Strasbourg")
 document.getElementById("par").style.display = "none";
 document.getElementById("vil").style.display = "none"; }
 
-else
+else if (nomVilleSelectionnee == "Paris") 
  {document.getElementById("par").style.display = "";
 document.getElementById("stras").style.display = "none";
 document.getElementById("vil").style.display = "none"; }
+else 
+ {document.getElementById("par").style.display = "";
+document.getElementById("stras").style.display = "";
+document.getElementById("vil").style.display = ""; }
 	
 }	
